@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmler</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+    <script type="module" src="film_script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .film-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .film-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            /* Satır çizgisi */
+            padding-bottom: 8px;
+            /* Aşağıya boşluk bırak */
+        }
+        
+        .film-item img {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+        
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+        
+        .checkbox-label {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Film Listesi</h1>
+
+    <ul class="film-list" id="film-list">
+        <li class="film-item">
+            <span>&#8226; The Shawshank Redemption (1994) - IMDb: 9.3</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film1"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Godfather (1972) - IMDb: 9.2</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film2"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Dark Knight (2008) - IMDb: 9.0</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film3"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Godfather: Part II (1974) - IMDb: 9.0</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film4"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Lord of the Rings: The Return of the King (2003) - IMDb: 8.9</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film5"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Pulp Fiction (1994) - IMDb: 8.9</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film6"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Schindler's List (1993) - IMDb: 8.9</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film7"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Inception (2010) - IMDb: 8.8</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film8"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Fight Club (1999) - IMDb: 8.8</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film9"> İzledim
+        </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Lord of the Rings: The Fellowship of the Ring (2001) - IMDb: 8.8</span>
+            <label class="checkbox-label">
+            <input type="checkbox" class="film-checkbox" name="film10"> İzledim
+        </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; The Silence of the Lambs (1991) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film11"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Star Wars: Episode V - The Empire Strikes Back (1980) - IMDb: 8.7</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film12"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Forrest Gump (1994) - IMDb: 8.8</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film13"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Spirited Away (2001) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film14"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Interstellar (2014) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film15"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Saving Private Ryan (1998) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film16"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Green Mile (1999) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film17"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Parasite (2019) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film18"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Léon: The Professional (1994) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film19"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Usual Suspects (1995) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film20"> İzledim
+            </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; City of God (2002) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film21"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Life Is Beautiful (1997) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film22"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Intouchables (2011) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film23"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Gladiator (2000) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film24"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; American History X (1998) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film25"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Pianist (2002) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film26"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Departed (2006) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film27"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Terminator 2: Judgment Day (1991) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film28"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Back to the Future (1985) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film29"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Whiplash (2014) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film30"> İzledim
+            </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; The Lion King (1994) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film31"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Lives of Others (2006) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film32"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Once Upon a Time in America (1984) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film33"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Cinema Paradiso (1988) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film34"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Grave of the Fireflies (1988) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film35"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Dangal (2016) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film36"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Paths of Glory (1957) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film37"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Sunset Blvd. (1950) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film38"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; WALL·E (2008) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film39"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Great Dictator (1940) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film40"> İzledim
+            </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; The Prestige (2006) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film41"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Lives of Others (2006) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film42"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Django Unchained (2012) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film43"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Dark Knight Rises (2012) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film44"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Oldeuboi (2003) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film45"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Shining (1980) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film46"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Avengers: Infinity War (2018) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film47"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Memento (2000) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film48"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Taare Zameen Par (2007) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film49"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Hamilton (2020) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film50"> İzledim
+            </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; Das Boot (1981) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film51"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Gladiator (2000) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film52"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Lives of Others (2006) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film53"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Joker (2019) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film54"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; North by Northwest (1959) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film55"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Mad Max: Fury Road (2015) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film56"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Your Name. (2016) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film57"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Aliens (1986) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film58"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Coco (2017) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film59"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; American Beauty (1999) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film60"> İzledim
+            </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; Amadeus (1984) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film61"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Three Billboards Outside Ebbing, Missouri (2017) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film62"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; 2001: A Space Odyssey (1968) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film63"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Toy Story (1995) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film64"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Inglourious Basterds (2009) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film65"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; L.A. Confidential (1997) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film66"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Heat (1995) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film67"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Monty Python and the Holy Grail (1975) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film68"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Rashomon (1950) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film69"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Jodaeiye Nader az Simin (2011) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film70"> İzledim
+            </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; Dangal (2016) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film71"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Once Upon a Time in America (1984) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film72"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Father (2020) - IMDb: 8.3</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film73"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Great Escape (1963) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film74"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Cinema Paradiso (1988) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film75"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Prestige (2006) - IMDb: 8.5</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film76"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Green Mile (1999) - IMDb: 8.6</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film77"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; My Neighbor Totoro (1988) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film78"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Oldboy (2003) - IMDb: 8.4</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film79"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Prisoners (2013) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film80"> İzledim
+            </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; Stand by Me (1986) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film81"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Batman Begins (2005) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film82"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Room (2015) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film83"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Judgment at Nuremberg (1961) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film84"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Shutter Island (2010) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film85"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Memories of Murder (2003) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film86"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Hacksaw Ridge (2016) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film87"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Ford v Ferrari (2019) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film88"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; To Kill a Mockingbird (1962) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film89"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Logan (2017) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film90"> İzledim
+            </label>
+        </li>
+        <li class="film-item">
+            <span>&#8226; Rebecca (1940) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film91"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Portrait of a Lady on Fire (2019) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film92"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Nausicaä of the Valley of the Wind (1984) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film93"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; In the Mood for Love (2000) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film94"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Before Sunrise (1995) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film95"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Paris, Texas (1984) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film96"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; Drishyam (2015) - IMDb: 8.2</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film97"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Help (2011) - IMDb: 8.0</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film98"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; The Princess Bride (1987) - IMDb: 8.0</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film99"> İzledim
+            </label>
+        </li>
+
+        <li class="film-item">
+            <span>&#8226; PK (2014) - IMDb: 8.1</span>
+            <label class="checkbox-label">
+                <input type="checkbox" class="film-checkbox" name="film100"> İzledim
+            </label>
+        </li>
+    </ul>
+
+    <script>
+        // Tarayıcıdan kayıtlı verileri alıp checkbox'ları işaretleyen fonksiyon
+        function restoreCheckboxes() {
+            const filmCheckboxes = document.querySelectorAll('.film-checkbox');
+            filmCheckboxes.forEach(checkbox => {
+                const checkboxState = localStorage.getItem(checkbox.getAttribute('name'));
+                if (checkboxState === 'checked') {
+                    checkbox.checked = true;
+                }
+            });
+        }
+
+        // Sayfa yüklendiğinde kayıtlı checkbox'ları geri yükle
+        document.addEventListener('DOMContentLoaded', () => {
+            restoreCheckboxes();
+        });
+
+        // Checkbox durumunu kaydeden fonksiyon
+        function saveCheckboxState(event) {
+            const checkbox = event.target;
+            const checkboxName = checkbox.getAttribute('name');
+            localStorage.setItem(checkboxName, checkbox.checked ? 'checked' : '');
+        }
+
+        // Checkbox'ların durumunu her değiştiğinde kaydet
+        const filmCheckboxes = document.querySelectorAll('.film-checkbox');
+        filmCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', saveCheckboxState);
+        });
+    </script>
+</body>
+
+</html>

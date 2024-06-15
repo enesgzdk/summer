@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    /* Kaydırma çubuğunu kaldırmak için */
+}
+
+.notes {
+    background-color: #fff;
+}
+
+.buttons {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.plans {
+    background-color: #fff;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: calc(100% - 40px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    background-color: #fff;
+    overflow-y: hidden;
+    /* Kaydırma çubuğunu kaldırmak için */
+}
+
+button {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 5px auto;
+    /* Butonlar arasında biraz daha fazla boşluk */
+    border: none;
+    border-radius: 5px;
+    background-color: #f54242;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a00b0b;
+}
